@@ -115,9 +115,9 @@ export default function About() {
           </div>
 
           {/* Right — stat cards */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 md:h-full">
             {stats.map((stat) => (
-              <div key={stat.label} className="card p-6 text-center fade-in-section shadow-card">
+              <div key={stat.label} className="card p-6 text-center fade-in-section shadow-card flex items-center justify-center flex-col">
                 <AnimatedCounter target={stat.target} suffix={stat.suffix} />
                 <p className="text-muted text-sm font-outfit mt-2">{stat.label}</p>
               </div>
@@ -128,7 +128,7 @@ export default function About() {
         {/* Pillars */}
         <div className="grid md:grid-cols-3 gap-6 mt-20">
           {pillars.map((pillar) => (
-            <div key={pillar.title} className="card-hover p-6 flex items-start gap-4 fade-in-section shadow-card">
+            <div key={pillar.title} className="card-hover p-6 h-full flex items-start gap-4 fade-in-section shadow-card">
               <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary-900/20 flex items-center justify-center">
                 {pillar.icon}
               </div>

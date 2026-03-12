@@ -175,13 +175,14 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow">
-          <span className="text-muted text-xs font-outfit">Scroll to explore</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M10 4v12m0 0l-4-4m4 4l4-4" stroke="#94A3B8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
+      </div>
+
+      {/* Scroll indicator — hidden on mobile/tablet, centered on desktop */}
+      <div className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-2 animate-bounce-slow">
+        <span className="text-muted text-xs font-outfit">Scroll to explore</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 4v12m0 0l-4-4m4 4l4-4" stroke="currentColor" className="text-muted" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
       </div>
     </section>
   );
