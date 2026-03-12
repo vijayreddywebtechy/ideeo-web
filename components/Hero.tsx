@@ -122,7 +122,7 @@ export default function Hero() {
 
               {/* Orbiting nodes */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit">
-                <div className="w-10 h-10 rounded-xl bg-white border border-surface-200 shadow-card flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-surface dark:bg-surface-100 border border-surface-200 shadow-card flex items-center justify-center">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="1.5">
                     <circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4m-9-9h4m14 0h4m-3.3-7.7l-2.8 2.8m-9.8 9.8l-2.8 2.8m0-15.6l2.8 2.8m9.8 9.8l2.8 2.8"/>
                   </svg>
@@ -130,7 +130,7 @@ export default function Hero() {
               </div>
 
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit-reverse">
-                <div className="w-10 h-10 rounded-xl bg-white border border-surface-200 shadow-card flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-surface dark:bg-surface-100 border border-surface-200 shadow-card flex items-center justify-center">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="1.5">
                     <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
                   </svg>
@@ -138,25 +138,25 @@ export default function Hero() {
               </div>
 
               {/* Floating elements */}
-              <div className="absolute top-4 right-4 w-14 h-14 rounded-2xl bg-white border border-surface-200 shadow-card flex items-center justify-center animate-float">
+              <div className="absolute top-4 right-4 w-14 h-14 rounded-2xl bg-surface dark:bg-surface-100 border border-surface-200 shadow-card flex items-center justify-center animate-float">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="1.5">
                   <path d="M12 2a4 4 0 014 4c0 2-2 3-2 5h-4c0-2-2-3-2-5a4 4 0 014-4zM10 17h4m-3 3h2"/>
                 </svg>
               </div>
 
-              <div className="absolute bottom-8 left-4 w-14 h-14 rounded-2xl bg-white border border-surface-200 shadow-card flex items-center justify-center animate-float-delayed">
+              <div className="absolute bottom-8 left-4 w-14 h-14 rounded-2xl bg-surface dark:bg-surface-100 border border-surface-200 shadow-card flex items-center justify-center animate-float-delayed">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="1.5">
                   <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                 </svg>
               </div>
 
-              <div className="absolute top-8 left-0 w-12 h-12 rounded-full bg-white border border-surface-200 shadow-card flex items-center justify-center animate-float-slow">
+              <div className="absolute top-8 left-0 w-12 h-12 rounded-full bg-surface dark:bg-surface-100 border border-surface-200 shadow-card flex items-center justify-center animate-float-slow">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" strokeWidth="1.5">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/>
                 </svg>
               </div>
 
-              <div className="absolute bottom-4 right-8 w-12 h-12 rounded-full bg-white border border-surface-200 shadow-card flex items-center justify-center animate-float">
+              <div className="absolute bottom-4 right-8 w-12 h-12 rounded-full bg-surface dark:bg-surface-100 border border-surface-200 shadow-card flex items-center justify-center animate-float">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" strokeWidth="1.5">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/>
                 </svg>

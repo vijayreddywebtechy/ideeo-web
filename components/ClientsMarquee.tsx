@@ -7,7 +7,7 @@ const clients = [
 
 export default function ClientsMarquee() {
   return (
-    <section className="relative py-10 border-y border-surface-200 bg-white overflow-hidden">
+    <section className="relative py-10 border-y border-surface-200 bg-surface overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 mb-5">
         <p className="text-muted text-xs font-outfit font-medium uppercase tracking-widest text-center">
           Trusted by innovative companies

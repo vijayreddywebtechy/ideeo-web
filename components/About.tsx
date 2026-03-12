@@ -76,7 +76,7 @@ const pillars = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 lg:py-32 bg-white">
+    <section id="about" className="relative py-24 lg:py-32 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
@@ -129,7 +129,7 @@ export default function About() {
         <div className="grid md:grid-cols-3 gap-6 mt-20">
           {pillars.map((pillar) => (
             <div key={pillar.title} className="card-hover p-6 flex items-start gap-4 fade-in-section shadow-card">
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary-900/20 flex items-center justify-center">
                 {pillar.icon}
               </div>
               <div>

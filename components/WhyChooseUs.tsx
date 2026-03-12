@@ -44,7 +44,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-white">
+    <section className="relative py-24 lg:py-32 overflow-hidden bg-surface">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary-50/60 rounded-full blur-[100px] -translate-y-1/2 -translate-x-1/4" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent-50/60 rounded-full blur-[100px] translate-y-1/3 translate-x-1/4" />

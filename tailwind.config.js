@@ -4,6 +4,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -31,15 +32,15 @@ module.exports = {
           600: '#6D28D9',
         },
         surface: {
-          DEFAULT: '#FFFFFF',
-          50: '#F8FAFC',
-          100: '#F1F5F9',
-          200: '#E2E8F0',
+          DEFAULT: 'rgb(var(--surface) / <alpha-value>)',
+          50: 'rgb(var(--surface-50) / <alpha-value>)',
+          100: 'rgb(var(--surface-100) / <alpha-value>)',
+          200: 'rgb(var(--surface-200) / <alpha-value>)',
         },
-        heading: '#0F172A',
-        body: '#475569',
-        muted: '#94A3B8',
-        subtle: '#CBD5E1',
+        heading: 'rgb(var(--heading))',
+        body: 'rgb(var(--body))',
+        muted: 'rgb(var(--muted))',
+        subtle: 'rgb(var(--subtle))',
       },
       fontFamily: {
         syne: ['var(--font-syne)', 'sans-serif'],

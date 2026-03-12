@@ -3,22 +3,50 @@
 @tailwind utilities;
 
 @layer base {
+  /* Theme CSS Variables */
+  :root {
+    --heading: 15 23 42;
+    --body: 71 85 105;
+    --muted: 148 163 184;
+    --subtle: 203 213 225;
+    --surface: 255 255 255;
+    --surface-50: 248 250 252;
+    --surface-100: 241 245 249;
+    --surface-200: 226 232 240;
+  }
+
+  .dark {
+    --heading: 241 245 249;
+    --body: 203 213 225;
+    --muted: 100 116 139;
+    --subtle: 71 85 105;
+    --surface: 15 23 42;
+    --surface-50: 17 24 39;
+    --surface-100: 30 41 59;
+    --surface-200: 51 65 85;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    background: #FFFFFF;
-    color: #475569;
+    background: rgb(var(--surface));
+    color: rgb(var(--body));
     font-family: var(--font-outfit), sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
     background: rgba(37, 99, 235, 0.15);
-    color: #0F172A;
+    color: rgb(var(--heading));
+  }
+
+  .dark ::selection {
+    background: rgba(37, 99, 235, 0.3);
   }
 
   ::-webkit-scrollbar {
@@ -26,16 +54,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #F8FAFC;
+    background: rgb(var(--surface-50));
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #CBD5E1;
+    background: rgb(var(--surface-200));
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #94A3B8;
+    background: rgb(var(--muted));
   }
 }
 
@@ -48,22 +76,41 @@
     color: #2563EB;
   }
 
+  .dark .section-tag {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: rgba(37, 99, 235, 0.25);
+    color: #60A5FA;
+  }
+
   /* Cards */
   .card {
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
+    background: rgb(var(--surface));
+    border: 1px solid rgb(var(--surface-200));
     border-radius: 16px;
     transition: all 0.3s ease;
+  }
+
+  .dark .card {
+    background: rgb(var(--surface-100));
   }
 
   .card-hover {
     @apply card;
   }
 
+  .dark .card-hover {
+    background: rgb(var(--surface-100));
+  }
+
   .card-hover:hover {
     border-color: #BFDBFE;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 12px 40px rgba(0,0,0,0.1);
     transform: translateY(-4px);
+  }
+
+  .dark .card-hover:hover {
+    border-color: #334155;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 12px 40px rgba(0,0,0,0.4);
   }
 
   /* Primary button */
@@ -79,11 +126,15 @@
     transform: translateY(-2px);
   }
 
+  .dark .btn-primary {
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+  }
+
   /* Outline button */
   .btn-outline {
     @apply px-7 py-3.5 rounded-xl font-outfit font-semibold text-sm transition-all duration-300;
-    border: 1.5px solid #E2E8F0;
-    color: #0F172A;
+    border: 1.5px solid rgb(var(--surface-200));
+    color: rgb(var(--heading));
   }
 
   .btn-outline:hover {
@@ -92,10 +143,19 @@
     background: rgba(37, 99, 235, 0.04);
   }
 
+  .dark .btn-outline:hover {
+    color: #60A5FA;
+    background: rgba(37, 99, 235, 0.1);
+  }
+
   /* Gradient text */
   .gradient-text {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, #2563EB, #7C3AED);
+  }
+
+  .dark .gradient-text {
+    background-image: linear-gradient(135deg, #60A5FA, #A78BFA);
   }
 
   /* Fade-in animation */
@@ -129,6 +189,10 @@
   animation: blink 1s step-end infinite;
   color: #2563EB;
   font-weight: 300;
+}
+
+.dark .typing-cursor::after {
+  color: #60A5FA;
 }
 
 @keyframes blink {

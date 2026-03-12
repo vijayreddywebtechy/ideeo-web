@@ -75,7 +75,7 @@ export default function TechStack() {
   const currentTab = tabs.find((t) => t.id === activeTab)!;
 
   return (
-    <section id="tech-stack" className="relative py-24 lg:py-32 bg-white">
+    <section id="tech-stack" className="relative py-24 lg:py-32 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in-section">
           <div className="section-tag mx-auto mb-4">Our Stack</div>
